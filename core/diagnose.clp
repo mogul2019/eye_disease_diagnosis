@@ -86,6 +86,31 @@ defrule Floater "This tests Floater disease"
 (printout t "Patient has Dry eye" crlf)
 )
 
+(defrule  dry_eye_test "This tests Corneal disease"
+(symptom(name "red eyes"|"watery eyes"|"pain"|"reduced vision"|"halo efect"))
+(retinal_examination_result(result "positive"))
+=>
+(assert (diagnosis(name Corneal)))
+(printout t "Patient has Corneal" crlf)
+)
+
+(defrule  dry_eye_test "This tests Eyelid disease"
+(symptom(name "pain eyes"|"Itching"|"sensitivity to light"))
+(retinal_examination_result(result "positive"))
+=>
+(assert (diagnosis(name Eyelid disease)))
+(printout t "Patient has Eyelid disease" crlf)
+)
+
+(defrule  dry_eye_test "This tests Dry eye disease"
+(symptom(name "loss of vision"))
+(patient (age "55"))
+(retinal_examination_result(result "positive"))
+=>
+(assert (diagnosis(name dry_eye)))
+(printout t "Patient has Dry eye" crlf)
+)
+
 (defrule  conjunctivitis_pinkeye_test "This tests Conjunctivitis (pinkeye) disease"
 (symptom(name "redness and pain in the eye"|"skin irritation around the eye"|"swelling or itchiness around the eyes"))
 (patient (age "55"))
