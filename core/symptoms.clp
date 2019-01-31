@@ -10,6 +10,9 @@
 *pain
 *swelling
 *injuries
+*watery eyes
+*hallow effect
+*discharge
 *crusting of the eye
 *blurred vision 
 *loss of vision
