@@ -5,9 +5,9 @@
 	(medical_history(pre_existing "diabetic"))
 =>
 (assert (diagnosis(name glaucoma_80pct)))
-(printout t "80% chance the patient has GLOUCOMA with is caused by An injury to the eye or Blocked blood vessels or Inflammatory disorders of the eye
+(printout t "80% chance the patient has GLOUCOMA which is caused by An injury to the eye or Blocked blood vessels or Inflammatory disorders of the eye
 
-treatment are eye drops, pills, laser surgery, traditional surgery or a combination of these methods" crlf)
+Treatment: eye drops, pills, laser surgery, traditional surgery or a combination of these methods" crlf)
 
 )
 
@@ -27,8 +27,8 @@ treatment are eye drops, pills, laser surgery, traditional surgery or a combinat
 (slit_lamp_result(result "positive"))
 =>
 (assert (diagnosis(name cataract)))
-(printout t "Patient has CATARACT is caused by diabetics,genetics ,obessity,smoking or eye injury 
-treatment is eyeglasses, brighter lighting, anti-glare sunglasses, or magnifying lenses" crlf)
+(printout t "Patient has CATARACT which is caused by diabetics,genetics ,obessity,smoking or eye injury 
+Treatment: eyeglasses, brighter lighting, anti-glare sunglasses, or magnifying lenses" crlf)
 )
 
 (defrule macular_degeneration_test "This tests Macular degeneration disease"
@@ -37,8 +37,8 @@ treatment is eyeglasses, brighter lighting, anti-glare sunglasses, or magnifying
 (goldmann_perimeter_result(result "positive"))
 =>
 (assert (diagnosis(name retinal_degeneration)))
-(printout t "Patient has Macular degeneration causes are obesity,age,smoking
-visit an ophthalmologist" crlf)
+(printout t "Patient has Macular degeneration. Causes are obesity,age,smoking.
+Treatment: visit an ophthalmologist" crlf)
 )
 
 (defrule diabetic_retinopathy_test "This tests Diabetic retinopathy disease"
@@ -47,8 +47,8 @@ visit an ophthalmologist" crlf)
 (ophthalmoscopy_result(result "positive"))
 =>
 (assert (diagnosis(name diabetic_retinopathy)))
-(printout t "Patient has Diabetic retinopathy which ois caused ny diabetics obesity
-treatment regulate blood sugar level" crlf)
+(printout t "Patient has Diabetic retinopathy which is caused ny diabetics obesity
+Treatment: regulate blood sugar level" crlf)
 )
 
 (defrule Lazy eye "This Lazy Eye  disease"
@@ -57,7 +57,7 @@ treatment regulate blood sugar level" crlf)
 =>
 (assert (diagnosis(lazy eye)))
 (printout t "Patient has lazy eye
-treatment visit an ophthalmologist for futher treatment" crlf)
+Treatment: visit an ophthalmologist for futher treatment" crlf)
 )
 
 defrule Cross Eyes strabismus "This tests Strabismus disease"
@@ -65,8 +65,8 @@ defrule Cross Eyes strabismus "This tests Strabismus disease"
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name strabismus)))
-(printout t "Patient has strabismus causes are genetics, inappropriate development of the brain,
-treatment is strabismus eyeglasses or surgery" crlf)
+(printout t "Patient has strabismus. Causes are genetics, inappropriate development of the brain,
+Treatment: strabismus eyeglasses or surgery" crlf)
 )
 
 defrule Floater "This tests Floater disease"
@@ -74,8 +74,8 @@ defrule Floater "This tests Floater disease"
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name Floater)))
-(printout t "Patient has Floater is caused by old-age genetics or torn retina
-treatment eye surgery" crlf)
+(printout t "Patient has Floater which is caused by old-age genetics or torn retina
+Treatment: eye surgery" crlf)
 
 
 (defrule keratoconus_test "This tests Keratoconus disease"
@@ -83,8 +83,8 @@ treatment eye surgery" crlf)
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name keratoconus)))
-(printout t "Patient has Keratoconus is caused by weakening of corneal tissue
-treatment  keratoconus eyeglasses or soft contact lenses " crlf)
+(printout t "Patient has Keratoconus which is caused by weakening of corneal tissue
+Treatment: keratoconus eyeglasses or soft contact lenses " crlf)
 )
 
 (defrule  dry_eye_test "This tests Dry eye disease"
@@ -93,8 +93,8 @@ treatment  keratoconus eyeglasses or soft contact lenses " crlf)
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name dry_eye)))
-(printout t "Patient has Dry eye which is caused by old age
-treatment Artificial Tears" crlf)
+(printout t "Patient has Dry eye which is caused by old age.
+Treatment: Artificial Tears" crlf)
 )
 
 (defrule  dry_eye_test "This tests Corneal disease"
@@ -102,8 +102,8 @@ treatment Artificial Tears" crlf)
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name Corneal)))
-(printout t "Patient has Cornealwhich is genetic.eye trauna causes it
-treatment eye surgery" crlf)
+(printout t "Patient has Corneal which is genetic or caused by eye trauma
+Treatment: eye surgery" crlf)
 )
 
 (defrule  dry_eye_test "This tests Eyelid disease"
@@ -111,8 +111,8 @@ treatment eye surgery" crlf)
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name Eyelid disease)))
-(printout t "Patient has Eyelid disease is caused by allergy or fungi or bacteria
-treatment wash you eye with warm water and if the pain continuous visit the optician " crlf)
+(printout t "Patient has Eyelid disease which is caused by allergy or fungi or bacteria
+Treatment: wash your eye with warm water and if the pain continues visit the optician " crlf)
 )
 
 
@@ -122,6 +122,6 @@ treatment wash you eye with warm water and if the pain continuous visit the opti
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name dry_eye)))
-(printout t "Patient has Conjunctivitis (pinkeye) is caused by bacheria or allergic
-treatment antibiotic eye drops or allegy eye drop " crlf)
+(printout t "Patient has Conjunctivitis (pinkeye) which is caused by bacheria or allergic
+Treatment: antibiotic eye drops or allegy eye drop " crlf)
 )
