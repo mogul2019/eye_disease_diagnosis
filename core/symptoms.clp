@@ -17,6 +17,7 @@
 *cloudy vision
 *poor color perception
 *halos around bright light
+*seeing wavy or blurred lines with dark areas at the center
 *the presence of floaters
 *flu-like symptoms
 *sinus infection

@@ -1,21 +1,21 @@
-(defrule gloucoma_test_80pct "This tests whether the disease is gloucoma" 
+(defrule glaucoma_test_80pct "This tests whether the disease is glaucoma" 
 	(symptom(name "tearing"))
 	(observation(name "excessive tearing"))
 	(tonometry_result(result "longer than normal"))
 	(medical_history(pre_existing "diabetic"))
 =>
-(assert (diagnosis(name gloucoma_80pct)))
-(printout t "80% chance the patient has GLOUCOMA" crlf)
+(assert (diagnosis(name glaucoma_80pct)))
+(printout t "80% chance the patient has GLAUCOMA, recommend laser surgery or eye drops" crlf)
 )
 
-(defrule gloucoma_test_60pct "This tests whether the disease is gloucoma with 60% confidence" 
+(defrule glaucoma_test_60pct "This tests whether the disease is glaucoma with 60% confidence" 
 	(symptom(name "tearing"))
 	(observation(name "excessive tearing"))
 	(tonometry_result(result "longer than normal"))
 	(not (medical_history(pre_existing "diabetic")))
 =>
-(assert (diagnosis(name gloucoma_60pct)))
-(printout t "60% chance patient has GLOUCOMA, recommend diabetic test" crlf)
+(assert (diagnosis(name glaucoma_60pct)))
+(printout t "60% chance patient has GLAUCOMA, recommend diabetic test" crlf)
 )
 
 (defrule cataract_test "This tests cataract disease"
@@ -24,7 +24,7 @@
 (slit_lamp_result(result "positive"))
 =>
 (assert (diagnosis(name cataract)))
-(printout t "Patient has CATARACT" crlf)
+(printout t "Patient has CATARACT, recommend anti-glare sunglasses or magnifying lenses" crlf)
 )
 
 (defrule macular_degeneration_test "This tests Macular degeneration disease"
@@ -33,7 +33,7 @@
 (goldmann_perimeter_result(result "positive"))
 =>
 (assert (diagnosis(name retinal_degeneration)))
-(printout t "Patient has Macular degeneration" crlf)
+(printout t "Patient has Macular degeneration, recommend anti-VEGF therapy" crlf)
 )
 
 (defrule diabetic_retinopathy_test "This tests Diabetic retinopathy disease"
@@ -42,7 +42,7 @@
 (ophthalmoscopy_result(result "positive"))
 =>
 (assert (diagnosis(name diabetic_retinopathy)))
-(printout t "Patient has Diabetic retinopathy" crlf)
+(printout t "Patient has Diabetic retinopathy, recommend photocoagulation" crlf)
 )
 
 (defrule keratoconus_test "This tests Keratoconus disease"
@@ -50,7 +50,7 @@
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name keratoconus)))
-(printout t "Patient has Keratoconus" crlf)
+(printout t "Patient has Keratoconus, recommend eye glasses, intacs, collagen cross-linking or corneal transplant" crlf)
 )
 
 (defrule  dry_eye_test "This tests Dry eye disease"
@@ -59,7 +59,7 @@
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name dry_eye)))
-(printout t "Patient has Dry eye" crlf)
+(printout t "Patient has Dry eye, recommend eyedrops or gel inserts and ointments" crlf)
 )
 
 (defrule  conjunctivitis_pinkeye_test "This tests Conjunctivitis (pinkeye) disease"
@@ -68,5 +68,5 @@
 (retinal_examination_result(result "positive"))
 =>
 (assert (diagnosis(name dry_eye)))
-(printout t "Patient has Conjunctivitis (pinkeye)" crlf)
+(printout t "Patient has Conjunctivitis (pinkeye), recommend antibiotic eye drops and ointments" crlf)
 )
