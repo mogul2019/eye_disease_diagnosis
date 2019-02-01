@@ -1,23 +1,23 @@
-(defrule gloucoma_test_80pct "This tests whether the disease is gloucoma" 
+(defrule glaucoma_test_80pct "This tests whether the disease is glaucoma" 
 	(symptom(name "tearing"))
 	(observation(name "excessive tearing"))
 	(tonometry_result(result "longer than normal"))
 	(medical_history(pre_existing "diabetic"))
 =>
-(assert (diagnosis(name gloucoma_80pct)))
+(assert (diagnosis(name glaucoma_80pct)))
 (printout t "80% chance the patient has GLOUCOMA.
 treatment are eye drops, pills, laser surgery, traditional surgery or a combination of these methods" crlf)
 
 )
 
-(defrule gloucoma_test_60pct "This tests whether the disease is gloucoma with 60% confidence" 
+(defrule glaucoma_test_60pct "This tests whether the disease is gloucoma with 60% confidence" 
 	(symptom(name "tearing"))
 	(observation(name "excessive tearing"))
 	(tonometry_result(result "longer than normal"))
 	(not (medical_history(pre_existing "diabetic")))
 =>
-(assert (diagnosis(name gloucoma_60pct)))
-(printout t "60% chance patient has GLOUCOMA, recommend diabetic test" crlf)
+(assert (diagnosis(name glaucoma_60pct)))
+(printout t "60% chance patient has GLAUCOMA, recommend diabetic test" crlf)
 )
 
 (defrule cataract_test "This tests cataract disease"
